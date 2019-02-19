@@ -7,17 +7,27 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.6.3",
+    "react-dom": "^16.8.2",
     "react-native": "0.58.4"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",
-    "jest": "24.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "jest": "^24.1.0",
+    "jsdom": "^13.2.0",
     "metro-react-native-babel-preset": "0.51.1",
-    "react-test-renderer": "16.6.3"
+    "react": "^16.8.2",
+    "react-native-mock": "^0.3.1",
+    "react-native-mock-render": "^0.1.2",
+    "react-test-renderer": "^16.6.3"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "testEnvironment": "jsdom",
+    "setupFiles": [
+      "./setupTests.js"
+    ]
   }
 }
